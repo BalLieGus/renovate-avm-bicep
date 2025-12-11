@@ -1,0 +1,63 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "autodiscover": true,
+  "branchConcurrentLimit": 0,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "customManagers": [
+    {
+      "description": "Bicep AVM module version updates",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/\\.bicep$/"
+      ],
+      "matchStrings": [
+        "br/public:(?<depName>[^:]+):(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.AVMModules"
+    }
+  ],
+  "customDatasources": {
+    "AVMModules": {
+      "defaultRegistryUrlTemplate": "https://mcr.microsoft.com/v2/bicep/{{ packageName }}/tags/list",
+      "format": "json",
+      "transformTemplates": [
+        "{ \"releases\": $map(tags, function($t){ { \"version\": $t } }) }"
+      ]
+    }
+  },
+  "packageRules": [
+    {
+      "matchManagers": [
+        "regex"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchDatasources": [
+        "custom.AVMModules"
+      ],
+      "changelogUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/CHANGELOG.md",
+      "commitMessageTopic": "AVM Bicep module {{depName}}"
+    },
+    {
+      "matchManagers": [
+        "regex"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchDatasources": [
+        "custom.AVMModules"
+      ],
+      "changelogUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/CHANGELOG.md",
+      "commitMessageTopic": "AVM Bicep module {{depName}}",
+      "commitMessageSuffix": ":warning:breaking change:warning:"
+    }
+  ]
+}
