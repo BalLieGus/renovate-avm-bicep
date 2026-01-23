@@ -43,6 +43,7 @@
         "custom.AVMModules"
       ],
       "changelogUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/CHANGELOG.md",
+      "sourceUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/README.md",
       "commitMessageTopic": "AVM Bicep module {{depName}}"
     },
     {
@@ -56,6 +57,7 @@
         "custom.AVMModules"
       ],
       "changelogUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/CHANGELOG.md",
+      "sourceUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/README.md",
       "commitMessageTopic": "AVM Bicep module {{depName}}",
       "commitMessageSuffix": ":warning:breaking change:warning:"
     }
