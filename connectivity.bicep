@@ -47,7 +47,7 @@ module vnet 'br/public:avm/res/network/virtual-network:0.7.2' = {
   ]
 }
 
-module vng 'br/public:avm/res/network/virtual-network-gateway:0.10.0' = {
+module vng 'br/public:avm/res/network/virtual-network-gateway:0.10.1' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'vng-${locationShort}-${useCaseName}-vpn'
