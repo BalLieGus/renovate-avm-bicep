@@ -35,7 +35,7 @@ module vmpassword 'generate-pass.bicep' = {
 
 
 
-module uami 'br/public:avm/res/managed-identity/user-assigned-identity:0.4.3' = {
+module uami 'br/public:avm/res/managed-identity/user-assigned-identity:0.5.0' = {
   scope: az.resourceGroup(resourceGroupNameKeyVault)
   params: {
     name: 'uami-${locationShort}-${useCaseName}-secrets'
