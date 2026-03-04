@@ -85,7 +85,7 @@ module connection_kortemark 'br/public:avm/res/network/connection:0.1.6' = {
   }
 }
 
-module firewall 'br/public:avm/res/network/azure-firewall:0.9.2' = {
+module firewall 'br/public:avm/res/network/azure-firewall:0.10.0' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'afw-${locationShort}-${useCaseName}'
