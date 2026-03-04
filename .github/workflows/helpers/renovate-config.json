@@ -36,7 +36,6 @@
         "regex"
       ],
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ],
       "matchDatasources": [
@@ -50,6 +49,7 @@
         "regex"
       ],
       "matchUpdateTypes": [
+        "minor",
         "major"
       ],
       "matchDatasources": [
@@ -57,7 +57,7 @@
       ],
       "changelogUrl": "https://github.com/Azure/bicep-registry-modules/blob/main/{{ packageName }}/CHANGELOG.md",
       "commitMessageTopic": "AVM Bicep module {{depName}}",
-      "commitMessageSuffix": ":warning:breaking change:warning:"
+      "commitMessageSuffix": ":warning:possible breaking change:warning:"
     }
   ]
 }
