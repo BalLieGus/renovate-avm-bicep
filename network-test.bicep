@@ -49,7 +49,7 @@ module nsgServers 'br/public:avm/res/network/network-security-group:0.5.2' = {
   ]
 }
 
-module vnet 'br/public:avm/res/network/virtual-network:0.7.2' = {
+module vnet 'br/public:avm/res/network/virtual-network:0.9.0' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'vnet-${locationShort}-${useCaseName}'
