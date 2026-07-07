@@ -69,7 +69,7 @@ resource existingSecrets 'Microsoft.KeyVault/vaults@2025-05-01' existing = {
   name: keyVault.outputs.name
 }
 
-module server 'br/public:avm/res/compute/virtual-machine:0.21.0' = {
+module server 'br/public:avm/res/compute/virtual-machine:0.22.2' = {
   scope: az.resourceGroup(resourceGroupNameServers)
   params: {
     name: 'vm-${locationShort}-server'
