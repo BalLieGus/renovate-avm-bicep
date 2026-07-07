@@ -109,7 +109,7 @@ module server 'br/public:avm/res/compute/virtual-machine:0.21.0' = {
   ]
 }
 
-module backup 'br/public:avm/res/recovery-services/vault:0.11.1' = {
+module backup 'br/public:avm/res/recovery-services/vault:0.11.3' = {
   scope: az.resourceGroup(resourceGroupNameBackup)
   params: {
     name: 'rsv-${locationShort}-${useCaseName}'
