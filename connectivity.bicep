@@ -10,7 +10,7 @@ module rg_network 'br/public:avm/res/resources/resource-group:0.4.3' = {
   }
 }
 
-module networkWatcher 'br/public:avm/res/network/network-watcher:0.5.0' = {
+module networkWatcher 'br/public:avm/res/network/network-watcher:0.5.1' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   name: 'nw-${locationShort}-${useCaseName}'
   dependsOn: [
