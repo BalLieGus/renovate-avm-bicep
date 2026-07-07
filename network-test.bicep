@@ -39,7 +39,7 @@ module defaultRoute 'br/public:avm/res/network/route-table:0.5.0' = {
   ]
 }
 
-module nsgServers 'br/public:avm/res/network/network-security-group:0.5.2' = {
+module nsgServers 'br/public:avm/res/network/network-security-group:0.5.3' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'nsg-vnet-${locationShort}-${useCaseName}-snet-servers'
