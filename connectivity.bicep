@@ -73,7 +73,7 @@ module lng 'br/public:avm/res/network/local-network-gateway:0.4.0' = {
   }
 }
 
-module connection_kortemark 'br/public:avm/res/network/connection:0.1.6' = {
+module connection_kortemark 'br/public:avm/res/network/connection:0.1.7' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'conn-${locationShort}-kortemark'
