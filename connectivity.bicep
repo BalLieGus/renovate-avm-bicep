@@ -97,7 +97,7 @@ module firewall 'br/public:avm/res/network/azure-firewall:0.9.2' = {
   }
 }
 
-module firewall_policy 'br/public:avm/res/network/firewall-policy:0.3.4' = {
+module firewall_policy 'br/public:avm/res/network/firewall-policy:0.3.5' = {
   scope: az.resourceGroup(resourceGroupNameNetwork)
   params: {
     name: 'afwp-${locationShort}-${useCaseName}'
