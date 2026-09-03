@@ -26,7 +26,7 @@
       "defaultRegistryUrlTemplate": "https://mcr.microsoft.com/v2/bicep/{{ packageName }}/tags/list",
       "format": "json",
       "transformTemplates": [
-        "{ \"releases\": $map(tags, function($t){ { \"version\": $t } }) }"
+        "{ \"releases\": $map(tags, function($t){ { \"version\": $t } })[] }"
       ]
     }
   },
